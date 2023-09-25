@@ -74,24 +74,14 @@ VALUES ('1', '1b', TO_DATE('2023-09-25', 'YYYY-MM-DD'), 'Fico feliz que tenha go
 INSERT INTO Resposta (id_comentario, id_resposta, data_publicacao, mensagem)
 VALUES ('2', '2a', TO_DATE('2023-09-24', 'YYYY-MM-DD'), 'Experimente a receita de bolo!');
 
--- Inserções de dados na tabela Moderador
-INSERT INTO Moderador (email_moderador)
-VALUES ('moderador1@example.com');
-
-INSERT INTO Moderador (email_moderador)
-VALUES ('moderador2@example.com');
-
-INSERT INTO Moderador (email_moderador)
-VALUES ('moderador3@example.com');
--- Adicione mais linhas conforme necessário
 
 
 -- Inserções de dados na tabela Usuario_Postagem com valor padrão para MODERADOR
 -- Inserir dados fictícios na tabela Usuario_Postagem
 -- Inserções de dados na tabela Usuario_Postagem com moderadores
-INSERT INTO Usuario_Postagem (usuario, postagem, moderador) VALUES ('usuario1@example.com', 1, 'moderador1@example.com');
-INSERT INTO Usuario_Postagem (usuario, postagem, moderador) VALUES ('usuario2@example.com', 2, 'moderador2@example.com');
-INSERT INTO Usuario_Postagem (usuario, postagem, moderador) VALUES ('usuario3@example.com', 3, 'moderador3@example.com');
+INSERT INTO Usuario_Postagem (usuario, postagem, moderador) VALUES ('joao@email.com', 1, 'joao@email.com');
+INSERT INTO Usuario_Postagem (usuario, postagem, moderador) VALUES ('joao@email.com', 2, 'joao@email.com');
+-- INSERT INTO Usuario_Postagem (usuario, postagem, moderador) VALUES ('usuario3@example.com', 3, 'moderador3@example.com');
 -- Adicione mais linhas conforme necessário
 
 -- Adicione mais linhas conforme necessário
