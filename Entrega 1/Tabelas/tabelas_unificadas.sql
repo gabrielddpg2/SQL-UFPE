@@ -11,6 +11,9 @@ DROP TABLE Postagem;
 DROP TABLE Moderador;
 DROP TABLE Usuario;
 DROP TABLE Perfil;
+DROP TABLE Moderador;
+DROP TABLE Anunciante;
+DROP TABLE ConfigUser;
 
 CREATE TABLE Perfil (
 
