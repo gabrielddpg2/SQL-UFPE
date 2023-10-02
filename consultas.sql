@@ -7,17 +7,17 @@ SELECT * FROM Perfil;
 -- --------------------------------------------------------------------------------------------------
 -- Consulta sem Duplicatas
 SELECT DISTINCT DATA_CADASTRO
-FROM PERFIL 
+FROM PERFIL ;
 -- --------------------------------------------------------------------------------------------------
 -- Consulta sem iniciada por algum termo
 SELECT *
 FROM PERFIL
-WHERE SOBRENOME LIKE 'S%'
+WHERE SOBRENOME LIKE 'S%';
 -- --------------------------------------------------------------------------------------------------
 -- Consulta DE DATA DE CADASTRO AGRUPADAS POR DATA DE CADASTRO
 SELECT pf.data_cadastro, COUNT (pf.data_cadastro)
 FROM perfil pf
-GROUP BY data_cadastro  
+GROUP BY data_cadastro  ;
 
 -- --------------------------------------------------------------------------------------------------
 -- View a partir de 2 tabelas diferentes, relacionando cada topico com a data de cadastro do usuario,
@@ -26,14 +26,14 @@ GROUP BY data_cadastro
 CREATE VIEW Data_Topico AS
 SELECT pf.Data_Cadastro, ac.Topico_Associado
 FROM perfil pf
-INNER JOIN acompanha ac ON PF.EMAIL = ac.usuario_associado
+INNER JOIN acompanha ac ON PF.EMAIL = ac.usuario_associado;
 
 SELECT *
-FROM Data_Topico
+FROM Data_Topico;
 
 SELECT COUNT(Data_Cadastro), Topico_Associado
 FROM Data_Topico
-GROUP BY Topico_Associado
+GROUP BY Topico_Associado;
 -- --------------------------------------------------------------------------------------------------
 -- Realizar consulta de seleção-projeção-junção
 SELECT P.nome, P.sobrenome, U.data_assinatura
