@@ -17,6 +17,20 @@ VALUES ('pedro@email.com', 'Pedro', 'Ribeiro', TO_DATE('1980-07-12', 'YYYY-MM-DD
 INSERT INTO Perfil (email, nome, sobrenome, data_nascimento, data_cadastro, idade)
 VALUES ('lucas@email.com', 'Lucas', 'Oliveira', TO_DATE('1998-11-05', 'YYYY-MM-DD'), TO_DATE('2023-09-26', 'YYYY-MM-DD'), 24);
 
+INSERT INTO Perfil (email, nome, sobrenome, data_nascimento, data_cadastro, idade)
+VALUES ('richard@email.com', 'Richard', 'Rodrigues', TO_DATE('2001-12-21', 'YYYY-MM-DD'), TO_DATE('2023-09-24', 'YYYY-MM-DD'), 21);
+
+INSERT INTO Perfil (email, nome, sobrenome, data_nascimento, data_cadastro, idade)
+VALUES ('mariape@email.com', 'Maria', 'Pereira', TO_DATE('2002-04-23', 'YYYY-MM-DD'), TO_DATE('2023-08-12', 'YYYY-MM-DD'), 22);
+
+INSERT INTO Perfil (email, nome, sobrenome, data_nascimento, data_cadastro, idade)
+VALUES ('elaine@email.com', 'Elaine', 'Barros', TO_DATE('1976-09-09', 'YYYY-MM-DD'), TO_DATE('2023-09-20', 'YYYY-MM-DD'), 47);
+
+INSERT INTO Perfil (email, nome, sobrenome, data_nascimento, data_cadastro, idade)
+VALUES ('alice@email.com', 'Alice', 'Silva', TO_DATE('2000-05-10', 'YYYY-MM-DD'), TO_DATE('2023-08-10', 'YYYY-MM-DD'), 23);
+
+INSERT INTO Perfil (email, nome, sobrenome, data_nascimento, data_cadastro, idade)
+VALUES ('lucas@email.com', 'Lucas', 'Rangel', TO_DATE('1990-11-25', 'YYYY-MM-DD'), TO_DATE('2023-09-26', 'YYYY-MM-DD'), 32);
 
 -- Inserções de dados na tabela Usuario
 INSERT INTO Usuario (email_usuario, data_assinatura)
@@ -33,6 +47,21 @@ VALUES ('ana@email.com', TO_DATE('2023-09-26', 'YYYY-MM-DD'));
 
 INSERT INTO Usuario (email_usuario, data_assinatura)
 VALUES ('pedro@email.com', TO_DATE('2023-09-26', 'YYYY-MM-DD'));
+
+INSERT INTO Usuario (email_usuario, data_assinatura)
+VALUES ('lucas@email.com', TO_DATE('2023-09-26', 'YYYY-MM-DD'));
+
+INSERT INTO Usuario (email_usuario, data_assinatura)
+VALUES ('richard@email.com', TO_DATE('2023-09-26', 'YYYY-MM-DD'));
+
+INSERT INTO Usuario (email_usuario, data_assinatura)
+VALUES ('mariape@email.com', TO_DATE('2023-09-25', 'YYYY-MM-DD'));
+
+INSERT INTO Usuario (email_usuario, data_assinatura)
+VALUES ('elaine@email.com', TO_DATE('2023-09-25', 'YYYY-MM-DD'));
+
+INSERT INTO Usuario (email_usuario, data_assinatura)
+VALUES ('alice@email.com', TO_DATE('2023-09-25', 'YYYY-MM-DD'));
 
 INSERT INTO Usuario (email_usuario, data_assinatura)
 VALUES ('lucas@email.com', TO_DATE('2023-09-26', 'YYYY-MM-DD'));
@@ -156,7 +185,22 @@ INSERT INTO Acompanha (topico_associado, usuario_associado)
 VALUES ('Culinária', 'maria@email.com');
 
 INSERT INTO Acompanha (topico_associado, usuario_associado)
-VALUES ('Viagens', 'carlos@email.com');
+VALUES ('Esportes', 'carlos@email.com');
+
+INSERT INTO Acompanha (topico_associado, usuario_associado)
+VALUES ('Viagens', 'richard@email.com');
+
+INSERT INTO Acompanha (topico_associado, usuario_associado)
+VALUES ('Tecnologia', 'mariape@email.com');
+
+INSERT INTO Acompanha (topico_associado, usuario_associado)
+VALUES ('Viagens', 'elaine@email.com');
+
+INSERT INTO Acompanha (topico_associado, usuario_associado)
+VALUES ('Saúde', 'alice@email.com');
+
+INSERT INTO Acompanha (topico_associado, usuario_associado)
+VALUES ('Saúde', 'lucas@email.com');
 
 -- Inserções de dados na tabela Segue
 INSERT INTO Segue (seguidor, seguido)
