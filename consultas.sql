@@ -9,6 +9,11 @@ SELECT * FROM Perfil;
 SELECT DISTINCT DATA_CADASTRO
 FROM PERFIL 
 -- --------------------------------------------------------------------------------------------------
+-- Consulta sem iniciada por algum termo
+SELECT *
+FROM PERFIL
+WHERE SOBRENOME LIKE 'S%'
+-- --------------------------------------------------------------------------------------------------
 -- Realizar consulta de seleção-projeção-junção
 SELECT P.nome, P.sobrenome, U.data_assinatura
 FROM Perfil P
