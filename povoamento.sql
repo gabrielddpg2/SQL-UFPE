@@ -29,9 +29,6 @@ VALUES ('elaine@email.com', 'Elaine', 'Barros', TO_DATE('1976-09-09', 'YYYY-MM-D
 INSERT INTO Perfil (email, nome, sobrenome, data_nascimento, data_cadastro, idade)
 VALUES ('alice@email.com', 'Alice', 'Silva', TO_DATE('2000-05-10', 'YYYY-MM-DD'), TO_DATE('2023-08-10', 'YYYY-MM-DD'), 23);
 
-INSERT INTO Perfil (email, nome, sobrenome, data_nascimento, data_cadastro, idade)
-VALUES ('lucas@email.com', 'Lucas', 'Rangel', TO_DATE('1990-11-25', 'YYYY-MM-DD'), TO_DATE('2023-09-26', 'YYYY-MM-DD'), 32);
-
 -- Inserções de dados na tabela Usuario
 INSERT INTO Usuario (email_usuario, data_assinatura)
 VALUES ('joao@email.com', TO_DATE('2023-09-25', 'YYYY-MM-DD'));
@@ -63,8 +60,6 @@ VALUES ('elaine@email.com', TO_DATE('2023-09-25', 'YYYY-MM-DD'));
 INSERT INTO Usuario (email_usuario, data_assinatura)
 VALUES ('alice@email.com', TO_DATE('2023-09-25', 'YYYY-MM-DD'));
 
-INSERT INTO Usuario (email_usuario, data_assinatura)
-VALUES ('lucas@email.com', TO_DATE('2023-09-26', 'YYYY-MM-DD'));
 
 -- Inserções de dados na tabela Moderador
 INSERT INTO Moderador (email_moderador)
