@@ -1,11 +1,5 @@
+
 DROP TABLE Telefone;
-DROP TABLE Associa2;
-DROP TABLE Associa1;
-DROP TABLE Segue;
-DROP TABLE Acompanha;
-DROP TABLE Usuario_Postagem;
-DROP TABLE Resposta;
-DROP TABLE Comentario;DROP TABLE Telefone;
 DROP TABLE Associa2;
 DROP TABLE Associa1;
 DROP TABLE Segue;
@@ -18,7 +12,6 @@ DROP TABLE Postagem;
 DROP TABLE Moderador;
 DROP TABLE Usuario;
 DROP TABLE Perfil;
-DROP TABLE Moderador;
 DROP TABLE Anunciante;
 DROP TABLE ConfigUser;
 
