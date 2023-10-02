@@ -6,7 +6,7 @@ SELECT * FROM Perfil;
 
 -- --------------------------------------------------------------------------------------------------
 -- Consulta sem Duplicatas
-SELECT DISTINCT *
+SELECT DISTINCT DATA_CADASTRO
 FROM PERFIL 
 -- --------------------------------------------------------------------------------------------------
 -- Realizar consulta de seleção-projeção-junção
