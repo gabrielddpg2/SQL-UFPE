@@ -5,8 +5,10 @@
 SELECT * FROM Perfil;
 
 -- --------------------------------------------------------------------------------------------------
-
-
+-- Consulta sem Duplicatas
+SELECT DISTINCT *
+FROM PERFIL 
+-- --------------------------------------------------------------------------------------------------
 -- Realizar consulta de seleção-projeção-junção
 SELECT P.nome, P.sobrenome, U.data_assinatura
 FROM Perfil P
