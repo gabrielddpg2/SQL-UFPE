@@ -1,19 +1,60 @@
-
-
 -- selecionar todos os dados de uma tabela   
 
 SELECT * FROM Perfil;
 
 -- --------------------------------------------------------------------------------------------------
+
+-- selecionar um subconjunto de atributos de uma tabela  
+SELECT data_nascimento
+FROM Perfil ;
+
+-- --------------------------------------------------------------------------------------------------
+
+-- selecionar dados de uma tabela mediante alguma condição  
+
+SELECT * FROM Patrocinador
+WHERE valor_patrocinio > 300
+
+-- --------------------------------------------------------------------------------------------------
+
+--aplicar união 
+ 
+SELECT email_usuario AS email FROM Usuario
+UNION
+SELECT email_moderador AS email FROM Moderador;
+
+-- --------------------------------------------------------------------------------------------------
+-- aplicar interseção 
+
+SELECT email_usuario AS email FROM Usuario
+INTERSECT
+SELECT email_moderador AS email FROM Moderador;
+
+ -- --------------------------------------------------------------------------------------------------
+
+-- aplicar diferença 
+
+SELECT email_usuario AS email FROM Usuario
+EXCEPT/MINUS
+SELECT email_moderador AS email FROM Moderador;
+
+
+  
+-- --------------------------------------------------------------------------------------------------
+
 -- Consulta sem Duplicatas
 SELECT DISTINCT DATA_CADASTRO
 FROM PERFIL ;
+
 -- --------------------------------------------------------------------------------------------------
+
 -- Consulta sem iniciada por algum termo
 SELECT *
 FROM PERFIL
 WHERE SOBRENOME LIKE 'S%';
+
 -- --------------------------------------------------------------------------------------------------
+
 -- Consulta DE DATA DE CADASTRO AGRUPADAS POR DATA DE CADASTRO
 SELECT pf.data_cadastro, COUNT (pf.data_cadastro)
 FROM perfil pf
@@ -34,7 +75,9 @@ FROM Data_Topico;
 SELECT COUNT(Data_Cadastro), Topico_Associado
 FROM Data_Topico
 GROUP BY Topico_Associado;
+
 -- --------------------------------------------------------------------------------------------------
+
 -- Realizar consulta de seleção-projeção-junção
 SELECT P.nome, P.sobrenome, U.data_assinatura
 FROM Perfil P
@@ -51,6 +94,37 @@ LEFT JOIN Associa1 A1 ON P.id = A1.postagem
 LEFT JOIN Comentario C ON A1.comentario = C.id
 WHERE P.id = 1
 GROUP BY P.id, P.titulo_da_postagem;
+
+-- --------------------------------------------------------------------------------------------------
+
+-- realizar seleção sob condição que envolva outra seleção
+
+SELECT email_usuario AS email
+FROM Usuario
+WHERE email_usuario IN (SELECT seguido FROM Segue);
+
+-- --------------------------------------------------------------------------------------------------
+
+-- ordenar resultados de consultas de forma ascendente
+
+SELECT nome, data_nascimento
+FROM Perfil
+ORDER BY data_nascimento ASC, nome ASC
+
+-- --------------------------------------------------------------------------------------------------
+  
+-- criar regra apenas para consultas do banco criado
+
+CREATE OR REPLACE FUNCTION ObterEmailsUsuarios
+RETURN SYS_REFCURSOR
+IS
+    result_cursor SYS_REFCURSOR;
+BEGIN
+    OPEN result_cursor FOR
+        SELECT email_usuario AS email
+        FROM Usuario;
+        
+    RETURN result_cursor;
 
 -- --------------------------------------------------------------------------------------------------
 
