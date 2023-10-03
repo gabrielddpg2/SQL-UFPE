@@ -151,7 +151,6 @@ ALTER USER seu_usuario DEFAULT ROLE ddl_exec_rule;
 
 -- Conceda privilégios adicionais ao usuário, conforme necessário
 -- Por exemplo:
--- GRANT CONNECT, RESOURCE TO seu_usuario;
 
 -- --------------------------------------------------------------------------------------------------
 
